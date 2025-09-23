@@ -1,21 +1,6 @@
-#include <iostream> 
-#include <fstream> 
-#include <iomanip> 
-#include <cstring> 
-#include <cmath>
-#include <sstream>
-using namespace std; 
+#include "bibl.h" 
 
-void hashing(string& input);
-
-int main(){  
-    string input ("idhifojaoidaf4fdafawda6ss4615dgdrijamkwd521");
-    hashing(input);
-        
-    return 0;
-}
-
-void hashing(string& input){
+string hashing(string& input){
 
     int val[64];
     int j=1;
@@ -37,5 +22,20 @@ void hashing(string& input){
     for (int i=0;i<64;i++){
         hashed << hex << val[i]; 
     }
-    cout << hashed.str() << endl;
+    return hashed.str();
+}
+
+void salt(vector <string> &input){
+
+    const string CHARACTERS = "{|}~`_^]@?>=<;:.-,+*)('&%$#![";
+
+    std::random_device rd;
+    std::mt19937 generator(rd());
+
+    std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
+    for (int i=0;i<input.size();i++){
+        for (int i = 0; i < 5; i++) {
+            input[i]  += CHARACTERS[distribution(generator)];
+        }
+    }
 }
