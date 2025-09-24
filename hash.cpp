@@ -33,7 +33,8 @@ void salt(string &input){
     std::mt19937 generator(rd());
 
     std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
-        for (int i = 0; i < 5; i++) {
+    int amount = distribution(generator);
+        for (int i = 0; i < amount; i++) {
             input  += CHARACTERS[distribution(generator)];
         }
 }

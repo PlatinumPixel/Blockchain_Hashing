@@ -9,7 +9,7 @@ string hashing(string& );
 void spausdina(vector <string> ,vector <string> );
 void rankinis(vector <string> &);
 void salt(string &input);
-// void automatiskas (vector <stud> &);
+inline std::string ws2s(const std::wstring& );
 void failoNusk (vector<string> &, vector <string> &);
 void failoGen();
  void spausdinaFaila(vector <string> ,vector <string> , string );

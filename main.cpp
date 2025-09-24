@@ -1,8 +1,10 @@
 #include "bibl.h"
+#define UNICODE
 vector <string> I;
 vector <string> O;
 
-int main(){  
+int main(){
+    setlocale(LC_ALL, "Lithuanian");
     int input;
     string failas;
     while ((true)){
