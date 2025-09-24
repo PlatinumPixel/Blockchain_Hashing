@@ -8,10 +8,10 @@
 string hashing(string& );
 void spausdina(vector <string> ,vector <string> );
 void rankinis(vector <string> &);
-void salt(vector <string> &input);
+void salt(string &input);
 // void automatiskas (vector <stud> &);
-void failoNusk (vector <string> &);
-// void failoGen();
+void failoNusk (vector<string> &, vector <string> &);
+void failoGen();
  void spausdinaFaila(vector <string> ,vector <string> , string );
 
 # endif
