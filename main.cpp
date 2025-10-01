@@ -12,10 +12,9 @@ int main(){
         cout << "1 - Iveskite visus duomenis rankiniu budu(be salt generation) " << endl;
         cout << "2 - Iveskite duomenis rankniu budu(su salt generation) " << endl;
         cout << "3 - Sugeneruoti nauja duomenu faila " << endl;
-        cout << "4 - Paiimti duomenis is failo (su salt generation) " << endl;      
-        cout << "5 - Paiimti duomenis is failo (be salt generation) " << endl;      
-        cout << "6 - Baigti darba ir spausdinti i terminala " << endl;
-        cout << "7 - Baigti darba ir spausdinti i faila " << endl;
+        cout << "4 - Paiimti duomenis is failo (su salt generation) " << endl;          
+        cout << "5 - Baigti darba ir spausdinti i terminala " << endl;
+        cout << "6 - Baigti darba ir spausdinti i faila " << endl;
 
         try {
             if (!(cin>>input)||input<1 || input>7){
@@ -52,18 +51,14 @@ int main(){
                 case 4:
                     failoNusk(I,O);
                 break;
-
-                case 5:
-                    failoNuskBeSalt(I,O);
-                break;
                 
-                case 6:
+                case 5:
                     spausdina(I,O);
                     cout << "Spauskite Enter, kad uzdaryti programa..." << endl;
                     cin.ignore();
                     cin.get();
                     return 0;
-                 case 7:
+                 case 6:
                     cout << "Iveskite failo pavadinima ";
                     cin >> failas;
                     spausdinaFaila(I,O,failas);

@@ -41,7 +41,7 @@ End Function
 ```
 # Ekspermentinis tyrimas
 
-## 1. Pasiruošk testinius failus:
+## 4. Išmatuok efektyvumą:
 
 | Eilučių kiekis | Hashinimo laikas |
 |----------------|------------------|
@@ -58,3 +58,23 @@ End Function
 | 789            | 0.020754         |
 
 ![alt text](image.png)
+
+## 5. Kolizijų paieška:
+
+| String ilgis | Duplicate kiekis |
+|--------------|------------------|
+| 10           | 0                |
+| 100          | 0                |
+| 500          | 0                |
+
+(tikrinta su https://www.mynikko.com/tools/tool_duplicateremover.html)
+
+## 6. Lavinos Efektas
+
+Išviso poru: 50000
+Average HEX similarity: 20.44%
+Average BIT similarity: 57.71%
+
+# Išvados
+
+Hashinimas greitas ir duplikatu kiekis minimalus, bet lavinos efektas labai prastas. Taip pat programa nepriema lietuviškų raidžių
